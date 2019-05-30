@@ -1,0 +1,45 @@
+{
+  "name": "slack-fireman",
+  "version": "1.0.0",
+  "description": "A fireman bot for slack",
+  "main": "app/index.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node app/index.js",
+    "eslint": "eslint src/**/*.js --ignore-pattern \"node_modules/\"",
+    "test": "jest --runInBand --verbose",
+    "build": "babel src -d dist --source-maps",
+    "serve": "node dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neo1691/slack-fireman.git"
+  },
+  "keywords": [
+    "slack",
+    "bot",
+    "fireman",
+    "slack-app"
+  ],
+  "bugs": {
+    "url": "https://github.com/neo1691/slack-fireman/issues"
+  },
+  "homepage": "https://github.com/neo1691/slack-fireman#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/node": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.17.3",
+    "jest": "^24.8.0",
+    "jest-cli": "^24.8.0",
+    "nodemon": "^1.19.1"
+  }
+}
