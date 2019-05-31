@@ -24,3 +24,35 @@ We will have the `Dockerfile` to create the project into an image and then inita
 ### Project planning. 
 
 Let's try github board this time and see how it works. 
+
+## How to Run
+
+Install node modules
+```
+npm install
+```
+
+Start the project locally with auto reloading
+```
+npm start
+```
+
+Running lint check
+```
+npm run lint
+```
+
+Running Tests
+```
+npm run test
+```
+
+Build production files
+```
+npm run build
+```
+
+Serve the build files
+```
+npm run serve
+```
