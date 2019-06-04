@@ -1,8 +1,9 @@
 version: "2"
 services:
   backend:
-    build: src/backend
-    volumes:
-      - ./src/backend:/srv
+    image: valian/docker-node-autoinstaller
     ports:
       - 3000:3000
+    command: npm run start
+    volumes:
+      - ./src/backend:/srv
