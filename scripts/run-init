@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+# go back to root directory
+cd "${0%/*}/.."
+
+echo "Running init"
+echo "Building the docker images for this repo. Make sure you have docker and docker-compose installed."
+docker-compose build
+
+echo "Installing git hooks..."
+echo "Make sure that pre-commit is installed on your machine."
+echo "https://pre-commit.com"
+pre-commit install
+
+echo "Everything is setup and you are ready to develop."
+echo "Run docker-compose up to start the application locally."
