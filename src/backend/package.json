@@ -10,7 +10,6 @@
       "name": "Shamin Meerankutty"
     }
   ],
-
   "main": "app/index.js",
   "scripts": {
     "start": "nodemon --exec babel-node app/index.js",
