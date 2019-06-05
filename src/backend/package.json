@@ -2,12 +2,20 @@
   "name": "slack-fireman",
   "version": "1.0.0",
   "description": "A fireman bot for slack",
+  "contributors": [
+    {
+      "name": "Anubhavkumar Yadav"
+    },
+    {
+      "name": "Shamin Meerankutty"
+    }
+  ],
   "main": "app/index.js",
   "scripts": {
     "start": "nodemon --exec babel-node app/index.js",
     "eslint": "eslint src/**/*.js --ignore-pattern \"node_modules/\"",
     "test": "jest --runInBand --verbose",
-    "build": "babel src -d dist --source-maps",
+    "build": "babel app -d dist --source-maps",
     "serve": "node dist/index.js"
   },
   "repository": {
