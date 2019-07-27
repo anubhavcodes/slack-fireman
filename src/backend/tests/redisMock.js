@@ -4,8 +4,13 @@ export default (() => {
     set(key, value) {
       store[key] = value;
     },
-    get(key) {
-      return store[key];
+    getAsync(key) {
+      return new Promise((resolve, reject) => {
+        if (key in store) {
+          resolve(store[key]);
+        }
+        reject(Error('Not found'));
+      });
     },
     clear() {
       store = {};

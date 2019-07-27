@@ -6,7 +6,7 @@ const data = {
 };
 
 describe('Fireman Controller', () => {
-  it('gets the command and userid for fireman', () => {
+  it('gets the command and userid for fireman from the slack message', () => {
     expect(parseSlackMessage(data.text))
       .toEqual({
         command: 'set-fireman',

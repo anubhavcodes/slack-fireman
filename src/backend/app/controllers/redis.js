@@ -4,7 +4,7 @@ export default client => ({
   },
 
   getFireman(team) {
-    return client.get(`fireman/${team}`);
+    return client.getAsync(`fireman/${team}`);
   },
 
   saveAuthCredentials(teamId, data) {
@@ -12,6 +12,6 @@ export default client => ({
   },
 
   getAuthCredentials(teamId, data) {
-    return client.get(`auth/${teamId}`, data);
+    return client.getAsync(`auth/${teamId}`, data);
   },
 });

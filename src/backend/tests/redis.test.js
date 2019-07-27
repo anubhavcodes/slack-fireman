@@ -7,14 +7,16 @@ const authData = {
 };
 
 describe('Redis controller', () => {
-  test('saving fireman data to redis', () => {
+  test('saving fireman data to redis', async () => {
     Redis(client).saveFireman('team-id', '@member');
-    expect(Redis(client).getFireman('team-id')).toBe('@member');
+    const fireman = await Redis(client).getFireman('team-id');
+    expect(fireman).toBe('@member');
   });
 
-  test('saving auth data to redis', () => {
+  test('saving auth data to redis', async () => {
     Redis(client).saveAuthCredentials(authData.team_id, JSON.stringify(authData));
-    expect(Redis(client).getAuthCredentials(authData.team_id)).toBe(JSON.stringify(authData));
+    const storeData = await Redis(client).getAuthCredentials(authData.team_id);
+    expect(storeData).toBe(JSON.stringify(authData));
   });
 
   afterAll(() => {
