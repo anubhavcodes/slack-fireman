@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Setting up routes
 Object.keys(routes).forEach((path) => {
-  app.use(path, routes[path]);
+  app.use(`/api/${path}`, routes[path]);
 });
 
 export default app;

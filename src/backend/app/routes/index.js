@@ -1,5 +1,7 @@
 import v1 from './v1';
+import oauth from './oauth';
 
 export default {
-  '/api/v1': v1,
+  oauth,
+  v1,
 };
