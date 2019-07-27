@@ -1,5 +1,16 @@
+import { parseSlackMessage } from '../app/controllers/fireman';
+
+const data = {
+  command: '/fireman',
+  text: 'set-fireman @shamin616',
+};
+
 describe('Fireman Controller', () => {
-  it('adds 1 + 2 to equal 3', () => {
-    expect(1 + 2).toBe(3);
+  it('gets the command and userid for fireman', () => {
+    expect(parseSlackMessage(data.text))
+      .toEqual({
+        command: 'set-fireman',
+        user: '@shamin616',
+      });
   });
 });
