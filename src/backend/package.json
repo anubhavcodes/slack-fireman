@@ -15,6 +15,7 @@
     "start": "nodemon --exec babel-node app/index.js",
     "eslint": "eslint src/**/*.js --ignore-pattern \"node_modules/\"",
     "test": "jest --runInBand --verbose",
+    "test-watch": "jest --watch --runInBand --verbose",
     "build": "babel app -d dist --source-maps",
     "serve": "node dist/index.js"
   },
