@@ -1,16 +1,12 @@
 import 'dotenv/config';
-import express from 'express';
-import cors from 'cors';
-import bodyParser from 'body-parser';
+import app from './core/app';
 
-const app = express();
+const PORT = process.env.PORT || 3000;
 
-app.use(cors());
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-
-app.listen(3000, () => console.log('App running at http://localhost:3000'));
-
-app.get('/', (req, res) => {
-  res.json({ status: 'working' });
-});
+(function startApp() {
+  try {
+    app.listen(PORT, () => console.log('App running at http://localhost:3000'));
+  } catch (error) {
+    console.error(`Error Occured ${error}`);
+  }
+}());
