@@ -7,7 +7,12 @@ router.get('/', (req, res) => {
 });
 
 router.post('/bot', (req, res) => {
-  console.log(req.body.challenge);
+  console.log(req.body);
+  res.send(req.body.challenge);
+});
+
+router.post('/fireman', (req, res) => {
+  console.log(req.body);
   res.send(req.body.challenge);
 });
 
