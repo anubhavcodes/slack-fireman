@@ -1,4 +1,5 @@
 import { Router } from 'express';
+import Fireman from '../controllers/fireman';
 
 const router = Router();
 
@@ -11,9 +12,6 @@ router.post('/bot', (req, res) => {
   res.send(req.body.challenge);
 });
 
-router.post('/fireman', (req, res) => {
-  console.log(req.body);
-  res.send(req.body.challenge);
-});
+router.post('/fireman', Fireman.setFireman);
 
 export default router;
