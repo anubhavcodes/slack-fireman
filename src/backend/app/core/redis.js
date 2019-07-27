@@ -17,4 +17,4 @@ client.on('error', (err) => {
 
 export const getAsync = promisify(client.get).bind(client);
 
-export default client;
+export default { set: (key, value) => { client.set(key, value); }, getAsync };

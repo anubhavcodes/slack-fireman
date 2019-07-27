@@ -11,7 +11,7 @@ export default client => ({
     client.set(`auth/${teamId}`, data);
   },
 
-  getAuthCredentials(teamId, data) {
-    return client.getAsync(`auth/${teamId}`, data);
+  getAuthCredentials(teamId) {
+    return client.getAsync(`auth/${teamId}`);
   },
 });
