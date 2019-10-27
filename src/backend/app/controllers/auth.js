@@ -18,6 +18,7 @@ const authorizeUser = (req, res) => {
   request.post(`${process.env.SLACK_API_URL}oauth.access`, { form }, (err, response, body) => {
     if (!err && response.statusCode === 200) {
       const data = JSON.parse(body);
+      console.log(data);
       Redis(client).saveAuthCredentials(data.team_id, body);
       res.sendStatus(200);
     } else {

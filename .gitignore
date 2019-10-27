@@ -31,3 +31,4 @@ typings/
 dist/
 
 .package.json.hash
+.DS_Store

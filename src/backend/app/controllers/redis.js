@@ -8,6 +8,7 @@ export default client => ({
   },
 
   saveAuthCredentials(teamId, data) {
+    console.log("Saving cred")
     client.set(`auth/${teamId}`, data);
   },
 

@@ -28,6 +28,7 @@ const fetchChannelId = async (userId, authCred) => {
 const sendMessageToFireman = async (message, teamId) => {
   const fireman = JSON.parse(await Redis(client).getFireman(teamId));
   const authCred = JSON.parse(await Redis(client).getAuthCredentials(teamId));
+  console.log(authCred, teamId);
   const options = {
     url: `${process.env.SLACK_API_URL}chat.postMessage`,
     headers: {

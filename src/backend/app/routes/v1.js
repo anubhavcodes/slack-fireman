@@ -12,4 +12,8 @@ router.post('/bot', Bot.alertFireman);
 
 router.post('/fireman', Fireman.setFireman);
 
+router.post('/challenge', (req, res) => {
+  res.send(req.body.challenge);
+});
+
 export default router;
